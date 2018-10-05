@@ -51,6 +51,3 @@ if min_val[0] is 0:
 			break
 
 print('%s %s' %("".join(str(x) for x in min_val), "".join(max_val)))
-
-
-
