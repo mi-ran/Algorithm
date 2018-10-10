@@ -49,5 +49,3 @@ if __name__ == '__main__':
 
     res.sort(reverse=True)
     print("".join(res))
-            
-    
