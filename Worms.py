@@ -2,15 +2,15 @@ def search(arr, target, start, end):
     idx = (start + end)//2
     while True:
         if arr[idx] is target:
-            print(arr[idx], end=' ')
+            print(idx + 1)
             return
         elif arr[idx] > target:
-            if arr[idx - 1] < target:
-                print(arr[idx], end=' ')
+            if idx is 0 or arr[idx - 1] < target:
+                print(idx + 1)
                 return
-            search(arr, target, start, (start + end)//2)
-        elif arr[idx] > target:
-            search(arr, target, (start + end)//2, end)
+            return search(arr, target, start, (start + end)//2)
+        elif arr[idx] < target:
+            return search(arr, target, (start + end)//2, end)
         
 
 if __name__ == "__main__":
@@ -24,8 +24,6 @@ if __name__ == "__main__":
     b = int(input())
     bList = list(map(int, input().split()))
 
-    idx = len(aList)//2
     for i in bList:
-        search(aList, i, 0, len(aList)//2)
-
+        search(arr, i, 0, len(aList))
 
