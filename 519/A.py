@@ -12,4 +12,3 @@ if diff < 0:
 else:
     tmp = diff//n
     print(tmp + k + 1)
-
