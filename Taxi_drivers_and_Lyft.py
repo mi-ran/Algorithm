@@ -26,6 +26,9 @@ for i in range(0, len(who)):
             if diff1 > diff2:
                 cur = cur + 1
             res[cur] = res[cur] + 1
+    else:
+        if i is not len(who) - 1 and who[i + 1] is 1:
+            cur = cur + 1
 
 res_ = [str(r) for r in res]
 res_str = " ".join(res_)
