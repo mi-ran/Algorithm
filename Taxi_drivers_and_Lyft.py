@@ -33,4 +33,3 @@ for i in range(0, len(who)):
 res_ = [str(r) for r in res]
 res_str = " ".join(res_)
 print(res_str)
-            
