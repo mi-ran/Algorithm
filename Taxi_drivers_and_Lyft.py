@@ -1,4 +1,4 @@
-riders, taxi_drivers = list(map(int, input().split()))
+list(map(int, input().split()))
 points = list(map(int, input().split()))
 who = list(map(int, input().split()))
 
