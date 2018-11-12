@@ -1,12 +1,14 @@
-a = input()
+a = int(input())
 str_ = input()
 
 str_list = list(str_)
-list_ = []
 
-for i in range(0, int(a)-1):
-    temp = list(str_)
-    del temp[i]
-    list_.append(''.join(temp))
+for i in range(0, a-1):
+    if str_list[i] > str_list[i + 1]:
+        del str_list[i]
+        break
 
-print(min(list_))
+if len(str_list) < a:
+    print(''.join(str_list))
+else:
+    print(''.join(str_list[0:-1]))
