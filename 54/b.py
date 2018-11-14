@@ -1,9 +1,9 @@
 import sys
 import math
+
 n = int(input())
 count = 0
 primes = [2]
-
 
 tmp = True
 for i in range(2, int(math.sqrt(n)) + 1):
@@ -13,7 +13,6 @@ for i in range(2, int(math.sqrt(n)) + 1):
 if tmp:
     print(1)
     sys.exit()
-
 
 while n != 0:
     if n % 2 == 0:
@@ -43,5 +42,3 @@ while n != 0:
                 n = n - i
                 break
 print(count)
-
-
