@@ -2,13 +2,17 @@ n = int(input())
 bookStack = list(map(int, input().split()))
 vasays = list(map(int, input().split()))
 res  = []
+b = [False for i in range(0, n + 1)]
 
 for i in range(0, n):
-    if vasays[i] not in bookStack:
+    if b[vasays[i]]:
         res.append("0")
         continue
-    j = bookStack.index(vasays[i])
-    bookStack = bookStack[j + 1 :]
-    res.append(str(j+1))
+    for j in range(0, len(bookStack)):
+        b[bookStack[j]] = True
+        if vasays[i] == bookStack[j]:
+           bookStack = bookStack[j + 1 :]
+           res.append(str(j + 1))
+           break
 
 print(' '.join(res))
