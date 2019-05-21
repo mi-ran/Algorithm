@@ -1,7 +1,6 @@
 import sys
 
 e, n = list(map(int, input().split()))
-
 res = 0
 while True:
     if e + n < 3:
